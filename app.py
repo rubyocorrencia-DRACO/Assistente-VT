@@ -1,9 +1,16 @@
-import os
-from flask import Flask, request
-from telegram import Update
-from telegram.ext import Application, CommandHandler, ContextTypes
+from telegram import Update, Bot
+from telegram.ext import ApplicationBuilder, MessageHandler, filters
 
 TOKEN = "7387684386:AAFbCNWP9Rc0Y2G8Fh61MX0dbbGqGhoH8dM"
+
+app = ApplicationBuilder().token(TOKEN).build()
+
+async def handle_message(update: Update, context):
+    await update.message.reply_text("Olá! Estou funcionando.")
+
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
+app.run_polling()
 
 # Inicializa o Flask
 app = Flask(__name__)
