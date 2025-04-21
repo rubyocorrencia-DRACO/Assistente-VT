@@ -2,8 +2,3 @@ Flask==2.2.3
 python-telegram-bot==20.0
 gunicorn==20.1.0
 Werkzeug==2.2.2
-:contentReference[oaicite:9]{index=9}
-- :contentReference[oaicite:10]{index=10}&#8203;:contentReference[oaicite:11]{index=11}
-
-Se precisar de assistência adicional ou de um pacote completo dos arquivos do projeto, estou à disposição para ajudar.
-::contentReference[oaicite:12]{index=12}
