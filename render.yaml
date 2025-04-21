@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: assistente-virtual
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        fromSecret: TELEGRAM_TOKEN
+      - key: WEBHOOK_URL
+        value: "https://<your-render-app-url>/webhook"
+    healthCheckPath: "/health"
+    healthCheckIntervalSeconds: 30
+    healthCheckTimeoutSeconds: 5
+    healthCheckRetries: 3
+    healthCheckGracePeriodSeconds: 60
+    autoDeploy: true
+    regions:
+      - oregon
