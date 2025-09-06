@@ -1,0 +1,5 @@
+[
+  {"name": "Banho/Tosa", "duration": 60, "price": 80},
+  {"name": "Consulta Veterinária", "duration": 30, "price": 120},
+  {"name": "Vacinação", "duration": 15, "price": 50}
+]
